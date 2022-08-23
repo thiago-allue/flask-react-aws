@@ -13,5 +13,7 @@ COPY package-lock.json .
 RUN npm ci
 RUN npm install react-scripts@5.0.1 -g --silent
 
+RUN mkdir node_modules/.cache && chmod -R 777 node_modules/.cache
+
 # start app
 CMD ["npm", "start"]

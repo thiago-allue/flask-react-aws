@@ -30,7 +30,7 @@
       },
       {
         "name": "DATABASE_TEST_URL",
-        "value": "postgres://postgres:postgres@api-db:5432/api_test"
+        "value": "postgres://postgres:postgres@localhost:5432/api_test"
       },
       {
         "name": "SECRET_KEY",
