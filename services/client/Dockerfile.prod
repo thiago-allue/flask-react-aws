@@ -34,7 +34,7 @@ RUN npm run build
 #########
 
 # base image
-FROM nginx:stable-alpine
+FROM public.ecr.aws/nginx/nginx:stable
 
 # update nginx conf
 RUN rm -rf /etc/nginx/conf.d
