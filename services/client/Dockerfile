@@ -1,5 +1,5 @@
 # pull official base image
-FROM node:18-alpine
+FROM public.ecr.aws/lambda/nodejs:latest
 
 # set working directory
 WORKDIR /usr/src/app

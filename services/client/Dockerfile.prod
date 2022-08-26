@@ -3,7 +3,7 @@
 ###########
 
 # pull official base image
-FROM node:18-alpine as builder
+FROM public.ecr.aws/lambda/nodejs:latest as builder
 
 # set working directory
 WORKDIR /usr/src/app
