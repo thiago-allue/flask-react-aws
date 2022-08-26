@@ -1,5 +1,5 @@
 # pull official base image
-FROM public.ecr.aws/lambda/nodejs:latest
+FROM public.ecr.aws/bitnami/node:latest
 
 # set working directory
 WORKDIR /usr/src/app

@@ -3,7 +3,7 @@
 ###########
 
 # pull official base image
-FROM public.ecr.aws/lambda/nodejs:latest as builder
+FROM public.ecr.aws/bitnami/node:latest as builder
 
 # set working directory
 WORKDIR /usr/src/app
