@@ -27,7 +27,18 @@ phases:
           --build-arg NODE_ENV=production \
           --build-arg REACT_APP_API_SERVICE_URL=http://localhost:5004 \
           ./services/client
+      - >
+        docker build \
+          --target builder \
+          --cache-from 328489637624.dkr.ecr.us-east-1.amazonaws.com/thiago-test-driven-client:builder \
+          -f services/client/Dockerfile.prod \
+          -t 328489637624.dkr.ecr.us-east-1.amazonaws.com/thiago-test-driven-client:builder \
+          --build-arg NODE_ENV=production \
+          --build-arg REACT_APP_API_SERVICE_URL=http://localhost:5004 \
+          ./services/client
+
   post_build:
     commands:
     - docker push 328489637624.dkr.ecr.us-east-1.amazonaws.com/thiago-test-driven-users:prod
     - docker push 328489637624.dkr.ecr.us-east-1.amazonaws.com/thiago-test-driven-client:prod
+    - docker push 328489637624.dkr.ecr.us-east-1.amazonaws.com/thiago-test-driven-client:builder
